@@ -1,0 +1,22 @@
+<cdk-virtual-scroll-viewport appendOnly [sdsPageSize]="pageSize">
+  <table mat-table [dataSource]="ds" class="mat-elevation-z8">
+    <!-- Index Column -->
+    <ng-container matColumnDef="index">
+      <th mat-header-cell *matHeaderCellDef>Index</th>
+      <td mat-cell *matCellDef="let element">{{ element.index }}</td>
+    </ng-container>
+
+    <tr
+      mat-row
+      *matRowDef="
+        let row;
+        columns: displayedColumns;
+        let isEven = even;
+        let isOdd = odd
+      "
+      [class.even]="isEven"
+      [class.odd]="isOdd"
+    ></tr>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  </table>
+</cdk-virtual-scroll-viewport>

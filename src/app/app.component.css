@@ -1,0 +1,10 @@
+cdk-virtual-scroll-viewport {
+  height: 500px;
+}
+.even {
+  background-color: rgb(186, 241, 186);
+}
+
+.odd {
+  background-color: rgb(252, 220, 225);
+}
